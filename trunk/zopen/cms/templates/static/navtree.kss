@@ -1,0 +1,23 @@
+.portlet-navigation-tree .notloaded .expandFlag:click {
+    evt-click-preventdefault: true;
+    evt-click-preventbubbling: true;
+
+    action-server: showChildren url(kssAttrJoin('*nodeurl', '@@showChildren'));
+}
+
+.portlet-navigation-tree .collapseFlag:click,
+.portlet-navigation-tree .expandFlag:click {
+    evt-click-preventdefault: true;
+    evt-click-preventbubbling: true;
+
+    action-client: toggleClass parentnodecss('.navTreeItem|');
+    toggleClass-value: collapsed;
+
+    action-client: toggleClass alias(expand) parentnodecss('.navTreeItem|');
+    expand-value: expanded;
+
+    action-client: toggleClass alias(toggleHidden) parentnodecss('.navTreeItem|ul.navTree');
+    toggleHidden-value: hideme;
+    
+}
+

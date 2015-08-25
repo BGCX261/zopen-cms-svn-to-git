@@ -1,0 +1,95 @@
+<configure xmlns="http://namespaces.repoze.org/bfg">
+
+  <!-- include package="zope.component" file="meta.zcml" /-->
+  <include package="repoze.bfg.includes" />
+
+  <utility factory="zopen.frs.core.frs.FRS"
+           provides=".interfaces.IFRS" />
+
+  <adapter factory=".document.Document" />
+
+  <adapter factory=".navdata.NavtreeData" />
+
+  <subscriber
+     for="repoze.bfg.interfaces.IWSGIApplicationCreatedEvent"
+     handler=".run.initFRS"
+     />
+
+  <view
+      for=".interfaces.IFRSFolder"
+      view=".views.folder_view"
+      permission="view"
+      />
+  <view
+      for=".interfaces.IFRSFile"
+      view=".views.file_view"
+      permission="view"
+      name="view.html"
+      />
+  <view
+      for=".interfaces.IFRSDocument"
+      view=".views.document_view"
+      permission=".view"
+      />
+  <view
+      for=".interfaces.IFRSImage"
+      view=".views.image_view"
+      name="view.html"
+      permission="view"
+      />
+  <view
+      for=".interfaces.IFRSAsset"
+      view=".blog_views.blog_view"
+      permission="view"
+      name="blog.html"
+      />
+  <view
+      for=".interfaces.IFRSAsset"
+      view=".blog_views.blog_post_view"
+      permission="view"
+      name="blogpost.html"
+      />
+  <view
+      for=".interfaces.IFRSAsset"
+      view=".batch_views.batch_view"
+      permission="view"
+     />
+  <view
+      for=".interfaces.IFRSAsset"
+      view=".views.contact_view"
+      name='contact.html'
+     />
+  <view
+      for=".interfaces.IFRSAsset"
+      view=".views.rss_view"
+      name='rss.html'
+     />
+  <view
+      for=".interfaces.IFRSFile"
+      view=".views.download_view"
+      permission="view"
+      />
+
+  <view
+     for="*"
+     view=".views.rules_view"
+     name="rules"
+     />
+  <view
+     for="*"
+     view=".views.resources_view"
+     name="resources"
+     />
+  <view
+     for="*"
+     view=".views.static_view"
+     name="static"
+     />
+
+  <view
+     for="*"
+     view=".nav_views.showChildren"
+     name="showChildren"
+     />
+
+</configure>

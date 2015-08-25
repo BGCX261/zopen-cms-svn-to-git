@@ -1,0 +1,90 @@
+* {
+    vertical-align: top;
+}
+
+#header {
+    background: #E5E5E5;
+}
+
+#footer {
+    background: #EFEFEF;
+}
+
+#columnOne {
+    border: 2px solid #EFEEFE;
+    width: 16em;
+}
+
+#main {
+font-size:13px;
+border-left:1px solid #CDCDCD;
+border-right:1px solid #CDCDCD;
+}
+
+body_ {
+color:Black;
+font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+font-size:13px;
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+}
+body {
+-x-system-font:none;
+background-color:#E5E5E5;
+color:Black;
+font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+font-size:13px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0;
+padding:0;
+}
+
+#main ol {
+margin:0.5em 0 0 2.5em;
+}
+
+h1, h2 {
+border-bottom:1px solid #CCCCCC;
+font-weight:normal;
+}
+
+#portal-column-content {
+border-collapse:collapse;
+margin:0;
+padding:1em;
+vertical-align:top;
+}
+
+li div a:hover{
+background-color:#EDF3FE;
+}
+
+.1hideme{
+visibility: hidden;
+}
+.hideme{
+display: none;
+}
+
+/* navtree */
+li.selected div a.navTreeCurrentItem {
+background-color:#EDF3FE;
+border:1px solid #CCCCCC !important;
+color:#436976;
+}
+
+dt.portletHeader {
+background-color:#EDF3FE !important;
+border-color:-moz-use-text-color -moz-use-text-color #DEDEDE;
+border-style:none none solid;
+border-width:0 0 1px;
+font-weight:bold;
+}

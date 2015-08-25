@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.plone.org/deliverance" >
+  <xi:include href="standardrules.xml" />
+  <!--copy theme="//div[@id='navtree']" content="//div[@id='navtree']/*" nocontent="ignore"/-->
+  <!--copy theme="//td[@id='portal-column-one']" content="//td[@id='portal-column-one']/*" nocontent="ignore"/-->
+  <prepend theme="//tr[@id='portal_tr']" content="//td[@id='portal-column-one']" nocontent="ignore"/>
+  <append theme="//tr[@id='portal_tr']" content="//td[@id='portal-column-two']" nocontent="ignore"/>
+  <copy theme="//div[@id='content']" content="//div[@id='main']/*" nocontent="ignore"/>
+</rules>

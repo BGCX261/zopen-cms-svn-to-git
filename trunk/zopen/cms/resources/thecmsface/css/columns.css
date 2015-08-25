@@ -1,0 +1,61 @@
+
+    /* zrt-cssregistry: base_properties */
+    /*
+** Table-based column layout for all browsers.
+**
+** There's a table-less column layout alternative in the plone_tableless
+** skin layer, if you prefer layouts without tables.
+*/
+
+/* <dtml-with base_properties */
+
+#portal-columns {
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
+}
+#portal-column-one {
+vertical-align: top;
+width: columnOneWidth;
+border-collapse: collapse;
+padding: 0;
+}
+/*
+#portal-column-content {
+vertical-align: top;
+border-collapse: collapse;
+padding-top: 1em;
+margin: 0em 0em 2em;
+}
+#portal-column-two {
+vertical-align: top;
+width: columnTwoWidth;
+border-collapse: collapse;
+padding: 0;
+}
+*/
+#portal-column-content {
+vertical-align: top;
+border-collapse: collapse;
+padding: 1em;
+margin: 0;
+}
+#portal-column-two {
+vertical-align: top;
+width: 22%;
+border-collapse: collapse;
+padding: 0;
+}
+/* fullscreen */
+body.fullscreen #portal-column-one,
+body.fullscreen #portal-column-two {
+display: none;
+}
+body.fullscreen #portal-column-content {
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+/* </dtml-with */
+    

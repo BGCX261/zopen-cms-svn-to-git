@@ -1,0 +1,15 @@
+{
+  "main": {
+      "left_col": ".. navtree::\n   :root_depth: 2",
+      "hidden_keys": [
+          "img",
+          "index.rst"
+      ],
+      "contenttype": "Folder"
+  },
+  "dublin": {
+      "description": "",
+      "title": "产品信息"
+  }
+}
+

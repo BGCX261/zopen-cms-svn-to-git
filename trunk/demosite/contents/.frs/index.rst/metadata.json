@@ -1,0 +1,12 @@
+{
+  "main": {
+      "left_col":".. include:: indexcol.rst",
+      "right_col":"",
+      "contenttype": "Document"
+  },
+  "dublin": {
+      "description": "",
+      "title": "易度，带您进入互联网工作时代！"
+  }
+}
+

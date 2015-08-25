@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.plone.org/deliverance" >
+  <!--xi:include href="standardrules.xml" /-->
+  <!-- base rules -->
+  <prepend theme="//head" content="//head/link" nocontent="ignore" /> 
+  <prepend theme="//head" content="//head/style" nocontent="ignore" /> 
+  <append theme="//head" content="//head/script" nocontent="ignore" />    
+  <append theme="//head" content="//head/meta" nocontent="ignore" />
+  <append-or-replace theme="//head" content="//head/title" nocontent="ignore" />
+
+  <!-- user defined rules -->
+  <prepend theme="//tr[@id='portal-tr']" content="//td[@id='portal-column-one']" nocontent="ignore"/>
+  <append theme="//tr[@id='portal-tr']" content="//td[@id='portal-column-two']" nocontent="ignore"/>
+  <copy theme="//ul[@id='portal-globalnav']" content="//ul[@id='portal-globalnav']/*" nocontent="ignore"/>
+  <copy theme="//div[@id='content']" content="//div[@id='main']/*" nocontent="ignore"/>
+</rules>
